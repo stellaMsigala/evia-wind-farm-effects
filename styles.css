@@ -133,6 +133,13 @@ ul { padding-left: 24px; }
   margin: 42px auto 0;
 }
 
+.inventory-figure {
+  max-width: 860px;
+  margin: 28px auto 0;
+}
+
+.inventory-map { max-width: 660px; }
+
 .example-grid,
 .selector-grid,
 .comparison-grid {
@@ -260,7 +267,7 @@ footer {
   .header-inner,
   main,
   .footer-inner { width: min(100% - 28px, 1060px); }
-  .nav-inner { display: grid; grid-template-columns: repeat(5, 1fr); }
+  .nav-inner { display: grid; grid-template-columns: repeat(3, 1fr); }
   .site-nav a { padding: 12px 8px; text-align: center; font-size: 13px; }
   main { padding-top: 28px; }
 }
