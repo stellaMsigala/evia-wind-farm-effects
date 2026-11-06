@@ -134,11 +134,11 @@ ul { padding-left: 24px; }
 }
 
 .inventory-figure {
-  max-width: 860px;
+  max-width: 560px;
   margin: 28px auto 0;
 }
 
-.inventory-map { max-width: 660px; }
+.inventory-map { max-width: 430px; }
 
 .example-grid,
 .selector-grid,
