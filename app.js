@@ -89,7 +89,7 @@
     image.src = entry.src;
     image.alt = `Wind-speed difference at ${selection.height} metres AGL on ${formatTime(selection.time)}`;
     link.href = entry.src;
-    caption.textContent = `${formatTime(selection.time)} — ${selection.height} m AGL`;
+    caption.textContent = `${formatTime(selection.time)}, ${selection.height} m AGL`;
   }
 
   function updateAddress() {
