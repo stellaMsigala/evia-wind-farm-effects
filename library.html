@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scientific image library for the southern Evia wind-farm WRF study.">
+  <title>Image Library | Wind-Farm Effects over Southern Evia</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-name">Wind-Farm Effects on the Atmospheric Flow over Southern Evia</p>
+      <p class="site-subtitle">WRF modelling of a five-day Etesian event</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="study-area.html">Study Area</a>
+      <a class="active" aria-current="page" href="library.html">Image Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <p class="eyebrow">Scientific figures</p>
+    <h1>Image library</h1>
+    <p class="lead">
+      Paired WRF results for the CTRL and WF-existing simulations during the
+      August 2026 Etesian event.
+    </p>
+
+    <section class="section-rule">
+      <h2>Instantaneous wind-speed differences</h2>
+      <p>
+        WF-existing minus CTRL, in m s<sup>−1</sup>. Choose one time and height
+        for each panel. Arrows show CTRL wind direction at the selected height
+        and time.
+      </p>
+      <div class="selector-grid">
+        <form id="form-l" class="selector-form">
+          <fieldset>
+            <legend>Left image</legend>
+            <label for="time-l">Time (UTC)</label>
+            <select id="time-l" name="time_l"></select>
+            <label for="height-l">Height (m AGL)</label>
+            <select id="height-l" name="height_l"></select>
+            <button type="submit">Show left image</button>
+          </fieldset>
+        </form>
+        <form id="form-r" class="selector-form">
+          <fieldset>
+            <legend>Right image</legend>
+            <label for="time-r">Time (UTC)</label>
+            <select id="time-r" name="time_r"></select>
+            <label for="height-r">Height (m AGL)</label>
+            <select id="height-r" name="height_r"></select>
+            <button type="submit">Show right image</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="comparison-grid" aria-live="polite">
+        <figure>
+          <a id="link-l" href="#"><img id="image-l" src="" alt="Selected left wind-speed-difference map"></a>
+          <figcaption id="caption-l"></figcaption>
+        </figure>
+        <figure>
+          <a id="link-r" href="#"><img id="image-r" src="" alt="Selected right wind-speed-difference map"></a>
+          <figcaption id="caption-r"></figcaption>
+        </figure>
+      </div>
+      <p class="caption-note">Both panels use the same fixed colour scale (−3 to +3 m s<sup>−1</sup>). Click an image to open the full-resolution PNG.</p>
+    </section>
+
+    <section class="section-rule" id="methods">
+      <h2>Methods</h2>
+      <p>
+        The 10 m field uses WRF U10 and V10. At 50, 100, 200 and 250 m AGL,
+        destaggered wind components are interpolated independently to a constant
+        height above local terrain. The plotted field is
+        |U<sub>WF-existing</sub>| − |U<sub>CTRL</sub>|. Direction arrows are derived
+        from the earth-relative CTRL wind.
+      </p>
+      <p>
+        These are instantaneous differences. They contain the local wind-farm
+        wake response, but can also reflect small differences in the timing and
+        development of atmospheric structures between the two simulations. This
+        is particularly relevant in convective conditions, where patchy wind
+        patterns can make otherwise similar features develop or pass a location
+        at slightly different times.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">University of Patras, Greece</div>
+  </footer>
+  <script src="catalog.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

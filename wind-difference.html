@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare instantaneous wind-speed-difference maps over southern Evia.">
+  <title>Wind-Speed Differences | Southern Evia</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-name">Wind-Farm Effects on the Atmospheric Flow over Southern Evia</p>
+      <p class="site-subtitle">WRF modelling of a five-day Etesian event</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="study-area.html">Study Area</a>
+      <a class="active" aria-current="page" href="library.html">Image Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <p class="back-link"><a href="library.html">← Image-library overview</a></p>
+    <h1>Instantaneous wind-speed differences</h1>
+    <p class="lead">
+      WF-existing minus CTRL, in m s<sup>−1</sup>. Choose one time and height for
+      each side. Arrows show CTRL wind direction at the selected height and time.
+    </p>
+
+    <div class="selector-grid">
+      <form id="form-l" class="selector-form">
+        <fieldset>
+          <legend>Left image</legend>
+          <label for="time-l">Time (UTC)</label>
+          <select id="time-l" name="time_l"></select>
+          <label for="height-l">Height (m AGL)</label>
+          <select id="height-l" name="height_l"></select>
+          <button type="submit">Show left image</button>
+        </fieldset>
+      </form>
+
+      <form id="form-r" class="selector-form">
+        <fieldset>
+          <legend>Right image</legend>
+          <label for="time-r">Time (UTC)</label>
+          <select id="time-r" name="time_r"></select>
+          <label for="height-r">Height (m AGL)</label>
+          <select id="height-r" name="height_r"></select>
+          <button type="submit">Show right image</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="comparison-grid" aria-live="polite">
+      <figure>
+        <a id="link-l" href="#"><img id="image-l" src="" alt="Selected left wind-speed-difference map"></a>
+        <figcaption id="caption-l"></figcaption>
+      </figure>
+      <figure>
+        <a id="link-r" href="#"><img id="image-r" src="" alt="Selected right wind-speed-difference map"></a>
+        <figcaption id="caption-r"></figcaption>
+      </figure>
+    </div>
+
+    <p class="caption-note">
+      Both panels use the same fixed colour scale (−3 to +3 m s<sup>−1</sup>).
+      Click an image to open the full-resolution PNG.
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">University of Patras, Greece</div>
+  </footer>
+  <script src="catalog.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
