@@ -260,7 +260,7 @@ footer {
   .header-inner,
   main,
   .footer-inner { width: min(100% - 28px, 1060px); }
-  .nav-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .nav-inner { display: grid; grid-template-columns: repeat(5, 1fr); }
   .site-nav a { padding: 12px 8px; text-align: center; font-size: 13px; }
   main { padding-top: 28px; }
 }
