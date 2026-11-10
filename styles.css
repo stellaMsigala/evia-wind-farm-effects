@@ -261,14 +261,6 @@ button:focus { background: #e2e2e2; }
   background: #e2f2fd;
 }
 
-.configuration-note {
-  max-width: 900px;
-  margin-top: 18px;
-  padding: 12px 14px;
-  border-left: 3px solid #7ea8c5;
-  background: #eaf6fe;
-}
-
 footer {
   border-top: 1px solid #b6cedf;
   background: #e1f1fc;
